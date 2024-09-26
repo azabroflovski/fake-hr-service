@@ -1,6 +1,7 @@
 import { LogDB } from 'logdb-client'
+
 export const logDB = new LogDB({
     name: 'hr',
     url: 'http://logdbphp-nginx',
-    token: 'wluLq0sPDz87ZQwFvnPIBqRzPKXE0r7xirZBJiWo',
+    token: 'eO5eivhJNPZ9laLnC6kAlf8HNooD4VXFvRTW1S0G',
 })
