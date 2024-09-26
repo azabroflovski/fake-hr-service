@@ -3,10 +3,10 @@
   "description": "Какое то описание для сервис отдела кадров....",
   "version": "1.0.0",
   "service": {
-    "name": "hr_manager",
+    "name": "hr",
     "protocol": "hr",
     "git": {
-      "repository_url": "https://github.com/azabroflovski/fake-hr-service"
+      "repository_url": "https://github.com/azabroflovski/fake-hr-service.git"
     }
   }
 }
