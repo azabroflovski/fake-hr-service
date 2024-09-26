@@ -3,10 +3,11 @@ import { faker } from '@faker-js/faker';
 import { logDB } from './logdb.ts'
 
 const schedule = scheduleJob('*/5 * * * * *', async () => {
-    console.log('hr://birthday', 'payload:', {
+
+    console.log('hr://birthday', 'payload', JSON.stringify({
         fullName: faker.person.fullName(),
         email: faker.internet.email(),
-    })
+    }))
 
     await logDB.sendEvent('birthday', {
         fullName: faker.person.fullName(),
