@@ -10,12 +10,16 @@ const schedule = scheduleJob('*/5 * * * * *', async () => {
 
     console.log('hr://birthday', 'payload', JSON.stringify(fakeUser))
 
-    await logDB.sendEvent('birthday', {
-        fullName: faker.person.fullName(),
-        email: faker.internet.email(),
-    })
+    try {
+      await logDB.sendEvent('birthday', {
+          fullName: faker.person.fullName(),
+          email: faker.internet.email(),
+      })
 
-    console.log('Event stored')
+      console.log('Event stored')
+    } catch (error) {
+      console.log(error)
+    }
 })
 
 console.log('Schedule running: */5 * * * * *')
